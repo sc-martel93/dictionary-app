@@ -1,0 +1,60 @@
+.title {
+  font-size: 80px;
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 100%;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  align-content: stretch;
+  margin-right: 10%;
+}
+
+.form input {
+  height: 35px;
+  width: 70%;
+  margin-left: 10%;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 5px 15px;
+}
+
+.form button {
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 5px 15px;
+}
+
+.form button:hover {
+  background-color: rgba(1, 1, 1, 0.25);
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  text-decoration: underline;
+  margin-top: 15px;
+}
+
+.wordCard {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px;
+}
+
+.wordCard p {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: space-between;
+  align-items: flex-start;
+}

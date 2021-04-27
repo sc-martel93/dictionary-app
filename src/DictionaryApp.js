@@ -14,28 +14,30 @@ function DictionaryApp() {
             url: 'https://wordsapiv1.p.rapidapi.com/words/',
             params: { random: 'true' },
             headers: {
-                'x-rapidapi-key': '16ef5195ddmsha395af9aa747e37p1b4648jsnba14058d3035',
+                'x-rapidapi-key': process.env.REACT_APP_PUBLIC_KEY,
                 'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com'
             }
         });
     }
+    // 16ef5195ddmsha395af9aa747e37p1b4648jsnba14058d3035
 
     function searchWord() {
         setOptions({
             method: 'GET',
             url: `https://wordsapiv1.p.rapidapi.com/words/${query}`,
             headers: {
-                'x-rapidapi-key': '0229cd0a5dmshd08364def2b9ecep191a40jsn75fc550981c7',
+                'x-rapidapi-key': process.env.REACT_APP_PUBLIC_KEY,
                 'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com'
             }
         });
     }
 
+
     useEffect(() => {
-        axios.request(options).then(function (response) {
+        axios.request(options).then((response) => {
             setResult(response.data)
-            console.log(response.data)
-        }).catch(function (error) {
+            // console.log(response.data)
+        }).catch((error) => {
             console.error(error)
         })
     }, [options]);
